@@ -3,7 +3,8 @@ from django.http import HttpResponse
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='Home'),
-    path('products/', views.products, name='Products'),
-    path('customer/', views.customer, name='Customer'),
+    path('', views.home, name='home'),
+    path('products/', views.products, name='products'),
+    path('customer/<str:pk>/', views.customer, name='customer'),
+    path('create_order/', views.createOrder, name='create_order'),
 ]
